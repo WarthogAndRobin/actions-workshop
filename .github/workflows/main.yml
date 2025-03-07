@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-   greet:
+  greet:
         env:
             MY_ENV: "John Doe"
 runs-on: ubuntu-latest
@@ -15,7 +15,7 @@ runs-on: ubuntu-latest
       - run: ls -l
       - uses: actions/checkout@v2
       - run: ls -l
-       - name: Run a multi-line script
-        run: |
+      - name: Run a multi-line script
+        run: #|
           echo "Hello $MY_ENV"
-          echo "Hello $GITHUB_ACTOR"
+          #echo "Hello $GITHUB_ACTOR"
